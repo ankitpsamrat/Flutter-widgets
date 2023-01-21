@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/widgets/snackbar.dart';
+import 'package:widgets/widgets/shader_mask.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,9 +43,10 @@ class MyApp extends StatelessWidget {
       // home: RadioListTileWidget(),
       // home: RefreshIndicatorWidget(),
       // home: SelectableWidget(),
-      home: SnackbarWidget(),
+      // home: SnackbarWidget(),
       // home: LayoutBuilderWidget(),
       // home: FittedBoxWidget(),
+      home: ShaderMaskWidget(),
     );
   }
 }
