@@ -17,6 +17,7 @@ class GridTileWidget extends StatelessWidget {
           child: GridTile(
             header: Container(
               height: 40,
+              color: Colors.black,
               child: Center(
                 child: Text(
                   'Header',
@@ -25,14 +26,10 @@ class GridTileWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              color: Colors.black,
-            ),
-            child: Image.network(
-              'https://cdn.pixabay.com/photo/2016/03/08/20/03/flag-1244649_960_720.jpg',
-              fit: BoxFit.cover,
             ),
             footer: Container(
               height: 40,
+              color: Colors.black,
               child: Center(
                 child: Text(
                   'Footer',
@@ -41,7 +38,10 @@ class GridTileWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              color: Colors.black,
+            ),
+            child: Image.network(
+              'https://cdn.pixabay.com/photo/2016/03/08/20/03/flag-1244649_960_720.jpg',
+              fit: BoxFit.cover,
             ),
           ),
         ),
