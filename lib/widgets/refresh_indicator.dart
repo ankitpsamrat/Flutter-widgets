@@ -20,6 +20,14 @@ class _RefreshIndicatorWidgetState extends State<RefreshIndicatorWidget> {
         elevation: 0,
       ),
       body: RefreshIndicator(
+        color: Colors.white,
+        backgroundColor: Colors.yellowAccent,
+        onRefresh: () async {
+          await Future.delayed(Duration(seconds: 1));
+          int nextItem = items.length + 1;
+          items.add('Item $nextItem');
+          setState(() {});
+        },
         child: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
@@ -32,14 +40,6 @@ class _RefreshIndicatorWidgetState extends State<RefreshIndicatorWidget> {
           },
           padding: EdgeInsets.all(5),
         ),
-        color: Colors.white,
-        backgroundColor: Colors.yellowAccent,
-        onRefresh: () async {
-          await Future.delayed(Duration(seconds: 1));
-          int nextItem = items.length + 1;
-          items.add('Item $nextItem');
-          setState(() {});
-        },
       ),
     );
   }
