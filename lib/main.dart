@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/widgets/drop_down.dart';
-import 'package:widgets/widgets/shader_mask.dart';
 
 void main() {
   runApp(const MyApp());
