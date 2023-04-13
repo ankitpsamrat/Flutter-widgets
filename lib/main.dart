@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets/drop_down.dart';
+import 'package:widgets/widgets/bottom_modal_sheet.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Widget Test',
       // home: BannerWidget(),
-      // home: BottomSheetWidget(),
+      home: BottomModalSheetWidget(),
       // home: ReorderableListViewWidget(),
       // home: CheckBoxWidget(),
       // home: ContextMenuWidget(),
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
       // home: LayoutBuilderWidget(),
       // home: FittedBoxWidget(),
       // home: ShaderMaskWidget(),
-      home: DropDownWidget(),
+      // home: DropDownWidget(),
     );
   }
 }
