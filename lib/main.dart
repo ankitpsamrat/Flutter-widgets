@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets/container.dart';
+import 'package:widgets/widgets/copy_content.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +48,9 @@ class MyApp extends StatelessWidget {
       // home: FittedBoxWidget(),
       // home: ShaderMaskWidget(),
       // home: DropDownWidget(),
-      home: ContainerWidget(),
+      // home: ContainerWidget(),
+      // home: VisibilityWidget(),
+      home: CopyContentWidget(),
     );
   }
 }
