@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets/wrap.dart';
+import 'package:widgets/widgets/visibility2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +51,8 @@ class MyApp extends StatelessWidget {
       // home: ContainerWidget(),
       // home: VisibilityWidget(),
       // home: CopyContentWidget(),
-      home: WrapWidget(),
+      // home: WrapWidget(),
+      home: VisibilityWidget2(),
     );
   }
 }

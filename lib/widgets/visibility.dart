@@ -29,7 +29,7 @@ class _VisibilityWidgetState extends State<VisibilityWidget> {
                   isVisible = !isVisible;
                 });
               },
-              child: Text(isVisible ? 'Show image' : 'Show image'),
+              child: Text(isVisible ? 'Hide image' : 'Show image'),
             ),
             SizedBox(height: 10),
             Visibility(
