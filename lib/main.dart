@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets/visibility2.dart';
+import 'package:widgets/widgets/silver_app_bar2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,7 +52,8 @@ class MyApp extends StatelessWidget {
       // home: VisibilityWidget(),
       // home: CopyContentWidget(),
       // home: WrapWidget(),
-      home: VisibilityWidget2(),
+      // home: VisibilityWidget2(),
+      home: SilverAppBarWidget2(),
     );
   }
 }
