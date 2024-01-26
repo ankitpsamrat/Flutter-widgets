@@ -15,46 +15,58 @@ class _IndexedStackWidgetState extends State<IndexedStackWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    index = 0;
-                  });
-                },
-                child: Text('0'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        index = 0;
+                      });
+                    },
+                    child: Text('0'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        index = 1;
+                      });
+                    },
+                    child: Text('1'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        index = 2;
+                      });
+                    },
+                    child: Text('2'),
+                  ),
+                ],
               ),
-              ElevatedButton(
-                onPressed: () {
-                  index = 1;
-                },
-                child: Text('1'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  index = 2;
-                },
-                child: Text('2'),
-              ),
+              const SizedBox(height: 20),
+              IndexedStack(
+                index: index,
+                children: [
+                  Image.network(
+                    'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
+                  ),
+                  Image.network(
+                    'https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg?crop=1xw:0.84415xh;center,top',
+                  ),
+                  Image.network(
+                    'https://img.freepik.com/free-photo/red-white-cat-i-white-studio_155003-13189.jpg',
+                  ),
+                ],
+              )
             ],
           ),
-          IndexedStack(
-            children: [
-              Image.network(
-                'https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D',
-              ),
-              Image.network(
-                'https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg?crop=1xw:0.84415xh;center,top',
-              ),
-              Image.network(
-                'https://img.freepik.com/free-photo/red-white-cat-i-white-studio_155003-13189.jpg',
-              ),
-            ],
-          )
-        ],
+        ),
       ),
     );
   }
